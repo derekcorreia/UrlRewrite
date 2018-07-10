@@ -1,5 +1,4 @@
-﻿using Sitecore.Analytics.Aggregation.Data.Model;
-using Sitecore.Analytics.Model;
+﻿using Sitecore.Analytics.Model;
 using Sitecore.Diagnostics;
 using Sitecore.ExperienceAnalytics.Aggregation.Data.Model;
 using Sitecore.ExperienceAnalytics.Aggregation.Data.Schema;
@@ -27,7 +26,9 @@ namespace Hi.UrlRewrite.Analytics
 
             var redirectItem = Sitecore.Data.Database.GetDatabase("master").GetItem(pageEvent.ItemId.ToString());
 
-            yield return redirectItem.Paths.ContentPath;
+            if (null != redirectItem) yield return redirectItem.Paths.ContentPath;
+
+            yield return string.Empty;
         }
 
         public override bool Filter(PageEventData pageEvent)

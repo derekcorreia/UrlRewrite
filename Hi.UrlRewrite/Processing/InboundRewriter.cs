@@ -328,21 +328,23 @@ namespace Hi.UrlRewrite.Processing
                 pattern = "^" + pattern + "$";
             }
 
-            var inboundRuleRegex = new Regex(pattern, inboundRule.IgnoreCase ? RegexOptions.IgnoreCase : RegexOptions.None);
+            inboundRuleMatch = Regex.Match(uriPath, pattern, inboundRule.IgnoreCase ? RegexOptions.IgnoreCase : RegexOptions.None, TimeSpan.FromSeconds(5));
 
-            inboundRuleMatch = inboundRuleRegex.Match(uriPath);
             bool isInboundRuleMatch = matchesThePattern ? inboundRuleMatch.Success : !inboundRuleMatch.Success;
 
-            Log.Debug(this, "Regex - Pattern: '{0}' Input: '{1}' Success: {2}", pattern, uriPath,
-                    isInboundRuleMatch);
+            // Removing logging until a fast way of seeing if it is enabled is implemented
+            //Log.Debug(this, "Regex - Pattern: '{0}' Input: '{1}' Success: {2}", pattern, uriPath,
+            //        isInboundRuleMatch);
 
             if (!isInboundRuleMatch && !uriPath.Equals(escapedUriPath, StringComparison.InvariantCultureIgnoreCase))
             {
-                inboundRuleMatch = inboundRuleRegex.Match(escapedUriPath);
-                isInboundRuleMatch = matchesThePattern ? inboundRuleMatch.Success : !inboundRuleMatch.Success;
+                inboundRuleMatch = Regex.Match(escapedUriPath, pattern, inboundRule.IgnoreCase ? RegexOptions.IgnoreCase : RegexOptions.None, TimeSpan.FromSeconds(5));
 
-                Log.Debug(this, "Regex - Pattern: '{0}' Input: '{1}' Success: {2}", pattern, escapedUriPath,
-                        isInboundRuleMatch);
+                isInboundRuleMatch = matchesThePattern ? inboundRuleMatch.Success : !inboundRuleMatch.Success;
+                
+                // Removing logging until a fast way of seeing if it is enabled is implemented
+                //Log.Debug(this, "Regex - Pattern: '{0}' Input: '{1}' Success: {2}", pattern, escapedUriPath,
+                //        isInboundRuleMatch);
             }
             return isInboundRuleMatch;
         }
