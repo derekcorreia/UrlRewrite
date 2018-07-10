@@ -25,6 +25,7 @@
     <RestorePackages>true</RestorePackages>
     <TargetFrameworkProfile />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -45,9 +46,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Sitecore.Analytics, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.Analytics.NoReferences.8.2.160729\lib\NET452\Sitecore.Analytics.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Sitecore.Analytics.NoReferences.8.2.171121\lib\NET452\Sitecore.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.Aggregation, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -55,33 +54,22 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Sitecore.Analytics.Core, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.Analytics.Core.NoReferences.8.2.160729\lib\NET452\Sitecore.Analytics.Core.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Sitecore.Analytics.Core.NoReferences.8.2.171121\lib\NET452\Sitecore.Analytics.Core.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Analytics.Model, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.Analytics.Model.NoReferences.8.2.160729\lib\NET452\Sitecore.Analytics.Model.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Sitecore.Analytics.Model.NoReferences.8.2.171121\lib\NET452\Sitecore.Analytics.Model.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ExperienceAnalytics, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.ExperienceAnalytics.NoReferences.8.2.160729\lib\NET452\Sitecore.ExperienceAnalytics.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Sitecore.ExperienceAnalytics.NoReferences.8.2.171121\lib\NET452\Sitecore.ExperienceAnalytics.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ExperienceAnalytics.Aggregation, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Sitecore.ExperienceAnalytics.Aggregation.NoReferences.8.2.160729\lib\NET452\Sitecore.ExperienceAnalytics.Aggregation.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Sitecore.ExperienceAnalytics.Aggregation.NoReferences.8.2.171121\lib\NET452\Sitecore.ExperienceAnalytics.Aggregation.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.2.160729\lib\NET452\Sitecore.Kernel.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Sitecore.Kernel.NoReferences.8.2.171121\lib\NET452\Sitecore.Kernel.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Logging, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Sitecore.Logging.NoReferences.8.2.160729\lib\NET452\Sitecore.Logging.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\Sitecore.Logging.NoReferences.8.2.171121\lib\NET452\Sitecore.Logging.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
