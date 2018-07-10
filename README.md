@@ -12,10 +12,15 @@ Sitecore Support: "Creation of custom segments is not supported by the Experienc
 Changelog
 =========
 
-Varsion 1.8.2 - https://github.com/iamandycohen/UrlRewrite/releases/tag/v1.8.2
+Version 1.8.2.6 - https://github.com/derekcorreia/UrlRewrite/releases/tag/1.8.2.6
+* Fixed an issue with object creation in match pipeline processor (caused issues with garbage collection under load).
+* Updated references to Sitecore 8.2 Update 6 (171121)
+* Temporarily removed logging from match pipeline processor
+
+Version 1.8.2 - https://github.com/iamandycohen/UrlRewrite/releases/tag/v1.8.2
 * Added support for Sitecore 8.2
 
-Varsion 1.8.1.3 - https://github.com/iamandycohen/UrlRewrite/releases/tag/v1.8.1.3
+Version 1.8.1.3 - https://github.com/iamandycohen/UrlRewrite/releases/tag/v1.8.1.3
 * Added support for Sitecore 8.1 Update 2 & Update 3
 * Fixed sort order thanks to Dan Sinclair
 * Fixed RulesEngine.GetRedirectFolderItems so that it only returns Redirect Folder templates
